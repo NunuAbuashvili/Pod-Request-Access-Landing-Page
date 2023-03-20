@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap");
+
+:root {
+  --medium-aquamarine: #54e6af;
+  --pale-blue: #b3ffe2;
+  --periwinkle: #c2cbe5;
+  --japanese-indigo: #2c344b;
+  --eerie-black: #121725;
+  --coral-red: #fb3e3e;
+  --white-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--eerie-black);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(./assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+/* Mobile */
+#main-footer {
+  display: none;
+}
+
+.error-message,
+.error-empty {
+  display: none;
+  color: var(--coral-red);
+  font-size: 0.75rem;
+  line-height: 0.88rem;
+}
+
+/* Font-sizes and colors */
+.title {
+  font-size: 1.7rem;
+  line-height: 2.375rem;
+  font-weight: 300;
+  color: var(--medium-aquamarine);
+  text-transform: uppercase;
+}
+
+span {
+  color: var(--white-color);
+  font-size: 1.6rem;
+}
+
+p {
+  color: var(--periwinkle);
+  font-size: 1em;
+  line-height: 1.56rem;
+  font-weight: 300;
+}
+
+::placeholder {
+  color: var(--white-color);
+  opacity: 0.5;
+  font-family: "Chivo", sans-serif;
+}
+
+/* Form and button */
+input,
+.btn {
+  height: 2.9rem;
+  border: none;
+  border-radius: 1.75rem;
+  font-family: inherit;
+  width: 100%;
+}
+
+input {
+  background-color: var(--japanese-indigo);
+  color: var(--white-color);
+  padding: 0.56rem 2rem;
+}
+
+.btn {
+  background-color: var(--medium-aquamarine);
+  color: var(--eerie-black);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Positioning */
+#main-header {
+  padding-top: 3.8rem;
+  padding-bottom: 3.6rem;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 22rem;
+  padding-bottom: 5.9rem;
+}
+
+.introduction-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  order: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  order: 3;
+}
+
+.input-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.partners {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: 1.4rem;
+  order: 2;
+  margin-bottom: 1rem;
+}
+
+.partners-logo {
+  cursor: pointer;
+}
+
+.spotify-logo,
+.apple-podcast-logo {
+  width: auto;
+  height: 1.1rem;
+}
+
+.google-podcast-logo {
+  width: auto;
+  height: 0.6rem;
+}
+
+.pocket-casts-logo {
+  width: auto;
+  height: 0.75rem;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 2.4rem;
+  }
+
+  body::before {
+    top: 0;
+    left: 36%;
+    right: 0;
+    opacity: 0.8;
+    background-image: url(./assets/tablet/image-host.jpg);
+    max-height: 50rem;
+  }
+
+  .title,
+  span {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    max-width: 27.8rem;
+  }
+
+  .text-content {
+    background-color: var(--eerie-black);
+    margin-top: 6.5rem;
+    max-width: 39.5rem;
+    padding-top: 5.8rem;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .introduction-text {
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .form {
+    max-width: 26.7rem;
+    position: relative;
+    gap: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .input-button {
+    gap: 0;
+  }
+
+  .error-message {
+    align-self: flex-start;
+    padding-left: 2rem;
+    margin-top: -2.5rem;
+  }
+
+  .error-empty {
+    align-self: flex-start;
+    padding-left: 2rem;
+    margin-top: -2.5rem;
+  }
+
+  input {
+    height: 3.5rem;
+  }
+
+  .btn {
+    position: relative;
+    top: -3.2rem;
+    left: 8rem;
+    width: 10.1rem;
+    order: 2;
+  }
+
+  .partners {
+    order: 3;
+    gap: 2.5rem;
+    max-width: 32.5rem;
+    margin-top: -1.5rem;
+  }
+
+  .spotify-logo,
+  .apple-podcast-logo {
+    width: auto;
+    height: 1.75rem;
+  }
+
+  .google-podcast-logo {
+    width: auto;
+    height: 1rem;
+  }
+
+  .pocket-casts-logo {
+    width: auto;
+    height: 1.25rem;
+  }
+
+  #main-footer {
+    display: block;
+    margin-top: 3rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 15rem;
+  }
+
+  body::before {
+    top: 13%;
+    left: 45%;
+    right: 0;
+    opacity: 1;
+    background-image: url(./assets/desktop/image-host.jpg);
+    background-size: contain;
+  }
+
+  .title,
+  span {
+    font-size: 3.25rem;
+    line-height: 3.875rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    max-width: 27.8rem;
+  }
+
+  #main-header {
+    padding-top: 6.3rem;
+    padding-bottom: 6.3rem;
+  }
+
+  .text-content {
+    background-color: var(--eerie-black);
+    margin-top: 0;
+    max-width: 45.2rem;
+    padding-top: 5.5rem;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .introduction-text {
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .form {
+    max-width: 26.7rem;
+    position: relative;
+    gap: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .input-button {
+    gap: 0;
+  }
+
+  .error-message {
+    align-self: flex-start;
+    padding-left: 2rem;
+    margin-top: -2.5rem;
+  }
+
+  .error-empty {
+    align-self: flex-start;
+    padding-left: 2rem;
+    margin-top: -2.5rem;
+  }
+
+  input {
+    height: 3.5rem;
+  }
+
+  .btn {
+    position: relative;
+    top: -3.2rem;
+    left: 8rem;
+    width: 10.1rem;
+    order: 2;
+  }
+
+  .partners {
+    order: 3;
+    gap: 2.5rem;
+    max-width: 32.5rem;
+    margin-top: -1.5rem;
+  }
+
+  .spotify-logo,
+  .apple-podcast-logo {
+    width: auto;
+    height: 1.75rem;
+  }
+
+  .google-podcast-logo {
+    width: auto;
+    height: 1rem;
+  }
+
+  .pocket-casts-logo {
+    width: auto;
+    height: 1.25rem;
+  }
+
+  #main-footer {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 8rem;
+  }
+}
+
+/* For larger screens */
+@media only screen and (min-width: 1440px) {
+  body {
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 15rem;
+  }
+
+  body::before {
+    top: 13%;
+    left: 45%;
+    right: 0;
+    opacity: 1;
+    background-image: url(./assets/desktop/image-host.jpg);
+    background-size: contain;
+  }
+
+  .title,
+  span {
+    font-size: 3.25rem;
+    line-height: 3.875rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    max-width: 27.8rem;
+  }
+
+  #main-header {
+    padding-top: 6.3rem;
+    padding-bottom: 6.3rem;
+  }
+
+  .text-content {
+    background-color: var(--eerie-black);
+    margin-top: 0;
+    max-width: 45.2rem;
+    padding-top: 5.5rem;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .introduction-text {
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .form {
+    max-width: 26.7rem;
+    position: relative;
+    gap: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .input-button {
+    gap: 0;
+  }
+
+  .error-message {
+    align-self: flex-start;
+    padding-left: 2rem;
+    margin-top: -2.5rem;
+  }
+
+  .error-empty {
+    align-self: flex-start;
+    padding-left: 2rem;
+    margin-top: -2.5rem;
+  }
+
+  input {
+    height: 3.5rem;
+  }
+
+  .btn {
+    position: relative;
+    top: -3.2rem;
+    left: 8rem;
+    width: 10.1rem;
+    order: 2;
+  }
+
+  .partners {
+    order: 3;
+    gap: 2.5rem;
+    max-width: 32.5rem;
+    margin-top: -1.5rem;
+  }
+
+  .spotify-logo,
+  .apple-podcast-logo {
+    width: auto;
+    height: 1.75rem;
+  }
+
+  .google-podcast-logo {
+    width: auto;
+    height: 1rem;
+  }
+
+  .pocket-casts-logo {
+    width: auto;
+    height: 1.25rem;
+  }
+
+  #main-footer {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+  }
+}

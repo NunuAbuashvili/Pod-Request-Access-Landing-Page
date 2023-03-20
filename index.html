@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pod Request Access Landing Page</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <img
+        class="logo header-logo"
+        src="./assets/desktop/logo.svg"
+        alt="Pod logo"
+      />
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Text content -->
+      <section class="text-content">
+        <!-- Text (Title and introduction) -->
+        <div class="introduction-text">
+          <h1 class="title">Publish your podcasts <span>everywhere.</span></h1>
+          <p>
+            Upload your audio to Pod with a single click. We’ll then distribute
+            your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
+            Casts and more!
+          </p>
+        </div>
+
+        <!-- Form -->
+        <div class="form">
+          <div class="input-button">
+            <input type="email" id="email" placeholder="Email address" />
+            <button
+              class="btn btn-request"
+              onclick="validateEmail(inputText, buttonRequest, errorMessage, errorEmpty)"
+            >
+              Request access
+            </button>
+          </div>
+          <p class="error-message">Oops! Please check your email</p>
+          <p class="error-empty">Oops! Please add your email</p>
+        </div>
+
+        <!-- Partners -->
+        <div class="partners">
+          <img
+            class="partners-logo spotify-logo"
+            src="./assets/desktop/spotify.svg"
+            alt="Spotify logo"
+          />
+          <img
+            class="partners-logo apple-podcast-logo"
+            src="./assets/desktop/apple-podcast.svg"
+            alt="Apple Podcast logo"
+          />
+          <img
+            class="partners-logo google-podcast-logo"
+            src="./assets/desktop/google-podcasts.svg"
+            alt="Google Podcasts logo"
+          />
+          <img
+            class="partners-logo pocket-casts-logo"
+            src="./assets/desktop/pocket-casts.svg"
+            alt="Pocket Casts logo"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <img
+        src="/assets/desktop/bg-pattern-dots.svg"
+        alt="A pattern of green dots"
+      />
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
